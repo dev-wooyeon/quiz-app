@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from './Button';
 
-function getMent(percent) {
+function getMent(percent: number) {
   if (percent < 20) {
     return '저를 너무 모르시네요... 친해지길 바래... 😇😇😇';
   }
@@ -16,40 +16,41 @@ function getMent(percent) {
   }
 
   if (percent < 80) {
-    return '생각보다 저를 많아 아시네요! 👀 🤔';
+    return '생각보다 저를 많이 아시네요! 👀 🤔';
   }
 
   return '당신이 말로만 듣던 도플갱어입니까? 🤦‍♂️🤦‍♀️';
 }
 
-function ResultView({
+interface ResultViewProps {
+  quiz: {
+    answer: string | number;
+  }[];
+  sheet: string[];
+  handleClickHome: () => void;
+}
+
+const ResultView: React.FC<ResultViewProps> = ({
   quiz,
   sheet,
   handleClickHome,
-}) {
+}) => {
   const totalAnswer = quiz.filter((item, index) => item.answer === sheet[index]);
   const percent = (totalAnswer.length / quiz.length) * 100;
 
   return (
     <>
       <header className='App-header'>
-        <h1>
-          {totalAnswer.length}개 맞췄어용!
-        </h1>
-        <p>
-          {getMent(percent)}
-        </p>
+        <h1>{totalAnswer.length}개 맞췄어용!</h1>
+        <p>{getMent(percent)}</p>
       </header>
       <section className='App-content'>
-        <Button
-          className='btn-key'
-          onClick={handleClickHome}
-        >
+        <Button className='btn-key' onClick={handleClickHome}>
           다시하기
         </Button>
       </section>
     </>
-  )
-}
+  );
+};
 
 export default ResultView;

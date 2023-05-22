@@ -5,24 +5,35 @@ import Dropdown from './Dropdown';
 
 import './Input.css';
 
-function QuizView({
+interface QuizViewProps {
+  currentQuiz: {
+    question: string;
+    useInput?: boolean;
+    choices?: string[];
+  };
+  currentAnswer: string;
+  handleClickChoice: (choice: string) => void;
+  handleClickPrev: () => void;
+  handleClickNext: () => void;
+  currentPage: number;
+}
+
+const QuizView: React.FC<QuizViewProps> = ({
   currentQuiz,
   currentAnswer,
   handleClickChoice,
   handleClickPrev,
   handleClickNext,
   currentPage,
-}) {
-  function handleInputChange(event) {
+}) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     handleClickChoice(event.target.value);
-  }
+  };
 
   return (
     <>
       <header className='App-header'>
-        <h1>
-          {currentQuiz.question}
-        </h1>
+        <h1>{currentQuiz.question}</h1>
       </header>
       <section className='App-content'>
         {currentQuiz.useInput && (
@@ -61,7 +72,7 @@ function QuizView({
         </div>
       </nav>
     </>
-  )
-}
+  );
+};
 
 export default QuizView;
