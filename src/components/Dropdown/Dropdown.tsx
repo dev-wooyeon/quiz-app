@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import Button from './Button';
+import Button from '../Button/Button';
 
 import './Dropdown.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Button from './Button';
-import Dropdown from './Dropdown';
+import Button from '../components/Button/Button';
+import Dropdown from '../components/Dropdown/Dropdown';
 
 import './Input.css';
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import quiz, { QuizQuestion, QuizAnswer } from './quiz';
-import QuizView from './QuizView';
-import ResultView from './ResultView';
+import quiz, { QuizQuestion, QuizAnswer } from './components/quiz';
+import QuizView from './pages/QuizView';
+import ResultView from './pages/ResultView';
 
 function App() {
   const [sheet, setSheet] = useState<string[]>([]);
