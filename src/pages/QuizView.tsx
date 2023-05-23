@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../components/Button/Button';
 import Dropdown from '../components/Dropdown/Dropdown';
 
-import './Input.css';
+import '../components/Input/Input.css';
 
 interface QuizViewProps {
   currentQuiz: {
