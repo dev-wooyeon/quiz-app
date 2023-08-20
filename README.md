@@ -1,7 +1,7 @@
 # 두유노은우?
 
 리액트를 복습하고 타입스크립트를 적용해보았습니다.
-[여기서](https://ieunune.github.io/quiz-app/) 볼 수 있습니다.
+[여기서](https://dev-wooyeon.github.io/quiz-app/)볼 수 있습니다.
 
 ### 🖼️ 서비스 화면
 - QnA 화면
