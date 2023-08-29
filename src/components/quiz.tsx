@@ -11,9 +11,9 @@ export interface QuizAnswer {
 
 const quiz: QuizQuestion[] = [
   {
-    question: '👴🏻 외모는 늙어보이지만 마음은 젊은 은우의 나이는 몇살일까요? 👴🏻',
+    question: '🚀 덩치는 크지만 마음은 약한 은우의 키는 몇일까요? 🚀',
     useInput: true,
-    answer: '28',
+    answer: '172',
   },
   {
     question: '🍹 은우가 가장 좋아하는 음료수는 무엇일까요? 🍹',
