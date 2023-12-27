@@ -1,5 +1,6 @@
 import React from 'react';
 
+import "../App.css";
 import Button from '../components/Button/Button';
 
 function getMent(percent: number) {
@@ -39,7 +40,7 @@ const ResultView: React.FC<ResultViewProps> = ({
   const percent = (totalAnswer.length / quiz.length) * 100;
 
   return (
-    <>
+    <div className="App">
       <header className='App-header'>
         <h1>{totalAnswer.length}개 맞췄슴다-!</h1>
         <p>{getMent(percent)}</p>
@@ -49,7 +50,7 @@ const ResultView: React.FC<ResultViewProps> = ({
           다시하기
         </Button>
       </section>
-    </>
+    </div>
   );
 };
 
